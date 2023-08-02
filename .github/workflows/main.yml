@@ -1,0 +1,37 @@
+name: Deploy Simple CI/CD
+
+on: 
+  push:
+    branched: ["main"]
+
+env:
+  AWS_REGION: us-east-1
+  ESC_SERVICE: simple-cicd-service
+  ESC_CLUSTER: simple-cicd-cluster
+  ECS_TASK_DEFINITION: .aws/task-definition.json
+
+permissions:
+  contents: read
+
+jobs:
+# Web Container Build/Test
+## get Sorce
+## Build / Test
+## Docker Image Build
+## Login AWS
+## Push image to ECR
+
+# API Conteiner Build/Test
+## get Sorce
+## Build / Test
+## Docker Image Build
+## Login AWS
+## Push image to ECR
+
+# Deploy
+## get Sorce
+## Login AWS
+## Edit Task Definition
+## Deploy
+
+
