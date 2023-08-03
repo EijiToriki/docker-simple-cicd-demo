@@ -28,6 +28,7 @@ jobs:
 
       - name: Build an Image and Run Tests
         run: |
+          chmod +x ./gradlew
           docker image build --target production -t temp_web_image_name:latest --build-arg REACT_APP_API_SERVER=/api .
 
       - name: Configure AWS credentials
